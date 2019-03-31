@@ -36,7 +36,10 @@ exports.saveRequest = function(req) {
 };
 
 exports.saveScreenshot = async function(id, contents) {
-  let browser = await puppeteer.launch({ headless: true });
+  let browser = await puppeteer.launch({
+    headless: true,
+    args: ["--no-sandbox"]
+  });
   let page = await browser.newPage();
 
   await page.setContent(contents);
