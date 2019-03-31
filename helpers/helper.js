@@ -13,11 +13,13 @@ exports.saveRequest = function(req) {
       user: headers["x-rapidapi-user"],
       ip: headers["x-real-ip"] || req.connection.remoteAddress,
       request_id: headers["x-request-id"],
-      x_rapidapi_subscription: headers["rapidapi-subscription"]
+      rapidapi_subscription: headers["x-rapidapi-subscription"]
     });
     request.save();
     var data = {
-      headers: headers
+      status: 200,
+      success: "true",
+      error: null
     };
     return [1, data];
   } else {
@@ -29,6 +31,8 @@ exports.saveRequest = function(req) {
     });
     request.save();
     var data = {
+      status: 401,
+      success: false,
       error: "Unauthenticated Request"
     };
     return [0, data];
