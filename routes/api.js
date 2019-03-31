@@ -24,6 +24,7 @@ router.post("/convert", async function(req, res, next) {
   if (reqFlag) {
     var id = req.headers["x-request-id"].replace("-", "_");
     var html = decodeURIComponent(req.body.html.replace(/\+/g, " "));
+    console.log(req.body.html);
     console.log(req.body.css ? req.body.css : "nocss");
     var css = req.body.css
       ? decodeURIComponent(req.body.css.replace(/\+/g, " "))
