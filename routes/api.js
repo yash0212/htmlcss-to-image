@@ -22,7 +22,7 @@ router.post("/convert", async function(req, res, next) {
   var [reqFlag, data] = helpers.saveRequest(req);
   //Request from RapidAPI
   if (reqFlag) {
-    var id = req.headers["x-request-id"].replace("-", "_");
+    var id = Math.floor(Math.random() * (412341234 - 12341234));
     var html = req.body.html;
     var css = req.body.css ? req.body.css : "";
 
