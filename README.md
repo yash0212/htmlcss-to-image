@@ -66,7 +66,7 @@ body{font-family:Helvetica,Arial,sans-serif;color:#654;padding:22px}h1,h2,p{padd
 
 - Do not provide any link to stylesheet or other scripts relative to your filesystem because that will not work on our servers alternatively you can upload those files to a CDN and then include then in your HTML code.
 
-- If you use any custom fonts in css, then please include then in your csss file using links like for Roboto google font use in the css parameter
+- If you use any custom fonts in css, then please include then in your css file using links like for Roboto google font
 
 ```
 @import url('https://fonts.googleapis.com/css?family=Roboto');
