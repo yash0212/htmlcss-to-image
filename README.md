@@ -2,6 +2,7 @@
 
 An API to convert html and css to image
 
+This repo will work only with RapidAPI Integration, changes can be made to work solely.
 **Features**
 
 - Convert plain HTML and CSS code to png image
